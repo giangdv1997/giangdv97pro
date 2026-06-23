@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<!--
+  ┌─────────────────────────────────────────────────────────────────┐
+  │  CV / PORTFOLIO  —  Fullstack Developer                          │
+  │  ⚠ CẦN ĐIỀN / XÁC NHẬN các chỗ đánh dấu  data-fill  bên dưới:    │
+  │    • Họ tên, chức danh, tagline                                  │
+  │    • Email, SĐT, địa chỉ, link GitHub / website                  │
+  │    • Số năm kinh nghiệm, mốc thời gian các công ty               │
+  │    • Năm tốt nghiệp, trường học                                  │
+  │  Tìm nhanh: search "data-fill" để thấy hết các chỗ cần sửa.      │
+  └─────────────────────────────────────────────────────────────────┘
+-->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Fullstack Developer</title>
+  <meta name="description" content="Hồ sơ Lập trình viên Fullstack — Java Spring Boot · Angular · Oracle" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ░░░ NAV ░░░ -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand">
+      <span class="nav__logo">&lt;/&gt;</span>
+      <span data-fill="name-short">Họ Tên</span>
+    </a>
+    <nav class="nav__links" aria-label="Mục lục">
+      <a href="#about">Giới thiệu</a>
+      <a href="#skills">Kỹ năng</a>
+      <a href="#experience">Kinh nghiệm</a>
+      <a href="#projects">Dự án</a>
+      <a href="#education">Học vấn</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+    <div class="nav__actions">
+      <button class="icon-btn" id="themeToggle" title="Đổi sáng/tối" aria-label="Đổi giao diện sáng/tối">
+        <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+      </button>
+      <button class="btn btn--ghost" id="printBtn" title="Lưu thành PDF">⤓ Tải PDF</button>
+      <button class="icon-btn nav__burger" id="burger" aria-label="Mở menu">☰</button>
+    </div>
+  </header>
+
+  <!-- ░░░ HERO ░░░ -->
+  <section class="hero" id="hero">
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__text">
+        <p class="hero__hello">
+          <span class="term">~/cv $</span> <span class="type" id="typeLine">whoami</span>
+        </p>
+        <h1 class="hero__name" data-fill="name">Họ Và Tên Của Bạn</h1>
+        <h2 class="hero__role">
+          <span class="grad">Senior Fullstack Developer</span>
+          <span class="sep">·</span> Tech Lead
+        </h2>
+        <p class="hero__tag" data-fill="tagline">
+          Java Spring Boot · Angular · Oracle — xây dựng hệ thống doanh nghiệp &amp;
+          thanh toán quy mô lớn cho khách hàng chính phủ.
+        </p>
+
+        <div class="hero__cta">
+          <a href="#contact" class="btn btn--primary">Liên hệ tôi</a>
+          <a href="#projects" class="btn btn--ghost">Xem dự án ↓</a>
+        </div>
+
+        <ul class="hero__chips">
+          <li><span>✉</span> <a href="mailto:your.email@gmail.com" data-fill="email">your.email@gmail.com</a></li>
+          <li><span>☎</span> <a href="tel:+849xxxxxxxx" data-fill="phone">09xx xxx xxx</a></li>
+          <li><span>⌖</span> <span data-fill="location">Hà Nội, Việt Nam</span></li>
+          <li><span>⎇</span> <a href="#" target="_blank" rel="noopener" data-fill="github">github.com/username</a></li>
+        </ul>
+      </div>
+
+      <div class="hero__stats">
+        <div class="stat">
+          <span class="stat__num" data-count="9">9</span><span class="stat__plus">+</span>
+          <span class="stat__label">Năm kinh nghiệm</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="20">20</span><span class="stat__plus">+</span>
+          <span class="stat__label">Dự án &amp; module</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="14">14</span><span class="stat__plus">+</span>
+          <span class="stat__label">Phiên bản Angular</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num" data-count="8">8</span>
+          <span class="stat__label">Dev được mentor</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="hero__scroll" aria-label="Cuộn xuống">⌄</a>
+  </section>
+
+  <main>
+
+    <!-- ░░░ ABOUT ░░░ -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__kicker">01 — Giới thiệu</span>
+        <h2 class="section__title">Mục tiêu nghề nghiệp</h2>
+      </div>
+      <div class="about reveal">
+        <p>
+          Lập trình viên <strong>Fullstack cấp cao</strong> với gần một thập kỷ kinh nghiệm xây dựng
+          các hệ thống doanh nghiệp quy mô lớn bằng <strong>Angular</strong>, <strong>Java Spring Boot</strong>
+          và <strong>Oracle Database</strong>. Đảm nhiệm vai trò <strong>Dev Lead</strong> dẫn dắt nhóm kỹ thuật
+          trong dự án Đấu thầu Điện tử Quốc gia, đồng thời có kinh nghiệm sâu về
+          <strong>tích hợp thanh toán &amp; giao dịch tài chính</strong> (Payoo, BIDV).
+        </p>
+        <p>
+          Mong muốn đồng hành cùng <strong>VETC</strong> phát triển hệ thống thu phí không dừng — nơi
+          yêu cầu cao về độ ổn định, bảo mật và khả năng xử lý giao dịch lớn — đúng với thế mạnh
+          backend &amp; payment của tôi.
+        </p>
+      </div>
+    </section>
+
+    <!-- ░░░ SKILLS ░░░ -->
+    <section class="section section--alt" id="skills">
+      <div class="section__head reveal">
+        <span class="section__kicker">02 — Năng lực</span>
+        <h2 class="section__title">Kỹ năng công nghệ</h2>
+        <p class="section__sub">Toàn diện cả Front-End lẫn Back-End — một fullstack thực thụ.</p>
+      </div>
+
+      <div class="skills">
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title"><span class="skill-card__ic">🖥</span> Front-End</h3>
+          <ul class="bars">
+            <li data-level="90"><span>Angular 8–14+ / TypeScript</span><i></i></li>
+            <li data-level="90"><span>HTML5 · CSS3 · JS ES6+</span><i></i></li>
+            <li data-level="85"><span>Bootstrap · SCSS · RxJS</span><i></i></li>
+            <li data-level="70"><span>ReactJS</span><i></i></li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title"><span class="skill-card__ic">⚙</span> Back-End</h3>
+          <ul class="bars">
+            <li data-level="90"><span>Java EE / SE (8, 11, 17)</span><i></i></li>
+            <li data-level="90"><span>Spring Boot · Spring MVC</span><i></i></li>
+            <li data-level="85"><span>Hibernate / JPA</span><i></i></li>
+            <li data-level="90"><span>RESTful API · SOAP</span><i></i></li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title"><span class="skill-card__ic">🗄</span> Database</h3>
+          <ul class="bars">
+            <li data-level="90"><span>Oracle 10g–19c · PL/SQL</span><i></i></li>
+            <li data-level="80"><span>MySQL · PostgreSQL</span><i></i></li>
+            <li data-level="70"><span>MongoDB</span><i></i></li>
+            <li data-level="85"><span>Tối ưu truy vấn · Stored Proc</span><i></i></li>
+          </ul>
+        </article>
+
+        <article class="skill-card reveal">
+          <h3 class="skill-card__title"><span class="skill-card__ic">🛠</span> DevOps &amp; Tools</h3>
+          <ul class="bars">
+            <li data-level="90"><span>Git · SVN · CI/CD</span><i></i></li>
+            <li data-level="75"><span>RedHat Linux · Docker</span><i></i></li>
+            <li data-level="90"><span>IntelliJ · WebStorm · Swagger</span><i></i></li>
+            <li data-level="85"><span>Agile / Scrum · Code Review</span><i></i></li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="tagcloud reveal">
+        <span>Java</span><span>Spring Boot</span><span>Angular</span><span>TypeScript</span>
+        <span>Oracle PL/SQL</span><span>RESTful</span><span>Hibernate</span><span>Microservices</span>
+        <span>Payment Integration</span><span>RedHat Linux</span><span>Git</span><span>CI/CD</span>
+        <span>Agile</span><span>RxJS</span><span>Bootstrap</span>
+      </div>
+    </section>
+
+    <!-- ░░░ EXPERIENCE ░░░ -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__kicker">03 — Hành trình</span>
+        <h2 class="section__title">Kinh nghiệm làm việc</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__top">
+              <h3>Senior Developer / Tech Lead <span class="tl__lead">(Dev Lead)</span></h3>
+              <span class="tl__date" data-fill="idnes-date">2022 – Hiện tại</span>
+            </div>
+            <p class="tl__org">IDNES Joint Stock Company</p>
+            <ul class="tl__list">
+              <li>Dẫn dắt nhóm <strong>5–8 lập trình viên</strong> phát triển hệ thống <strong>Đấu thầu Điện tử Quốc gia (e-Bidding)</strong> cho Bộ Kế hoạch &amp; Đầu tư.</li>
+              <li>Thiết kế kiến trúc kỹ thuật, xây dựng <strong>RESTful API (Spring Boot)</strong> tích hợp Oracle; viết <strong>PL/SQL</strong> phức tạp cho nghiệp vụ &amp; báo cáo.</li>
+              <li>Chuẩn hóa <strong>coding standards, branching strategy (Git), quy trình review &amp; deploy</strong>; chủ trì review code toàn nhóm.</li>
+              <li>Đầu mối kỹ thuật với khách hàng chính phủ; vận hành &amp; xử lý sự cố <strong>production (RedHat Linux)</strong>.</li>
+              <li>Mentor &amp; đào tạo lập trình viên mới về Angular và Spring Boot.</li>
+            </ul>
+            <div class="tl__tags"><span>Angular</span><span>Spring Boot</span><span>Oracle</span><span>RedHat Linux</span></div>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__top">
+              <h3>Fullstack Developer</h3>
+              <span class="tl__date" data-fill="fis-date">08/2016 – 2022</span>
+            </div>
+            <p class="tl__org">FPT Information System (FIS)</p>
+            <ul class="tl__list">
+              <li>Thiết kế, phát triển &amp; bảo trì ứng dụng web doanh nghiệp cho khách hàng <strong>chính phủ và thương mại</strong>.</li>
+              <li>Front-End bằng <strong>Angular (8–14) + TypeScript</strong>; Back-End bằng <strong>Java Spring Boot + Oracle</strong>.</li>
+              <li>Tham gia nhiều dự án <strong>tích hợp thanh toán</strong> (Payoo, BIDV) và chuyển đổi nền tảng (POS Mobifone).</li>
+              <li>Review code, hướng dẫn dev mới, phân tích yêu cầu &amp; phối hợp phát hành phiên bản.</li>
+            </ul>
+            <div class="tl__tags"><span>Java EE</span><span>Angular</span><span>Payment</span><span>RESTful</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░░ PROJECTS ░░░ -->
+    <section class="section section--alt" id="projects">
+      <div class="section__head reveal">
+        <span class="section__kicker">04 — Sản phẩm</span>
+        <h2 class="section__title">Dự án tiêu biểu</h2>
+      </div>
+
+      <div class="projects">
+        <article class="proj reveal">
+          <div class="proj__head">
+            <h3>Đấu thầu Điện tử Quốc gia</h3>
+            <span class="proj__role">Dev Lead</span>
+          </div>
+          <p class="proj__client">Bộ Kế hoạch &amp; Đầu tư · muasamcong.mpi.gov.vn</p>
+          <p>Cổng mua sắm công chính thức của Chính phủ, phục vụ hàng nghìn chủ đầu tư &amp; nhà thầu. Quản lý toàn bộ vòng đời đấu thầu: đăng thông báo, nộp hồ sơ, đánh giá, phê duyệt, quản lý hợp đồng.</p>
+          <div class="proj__tags"><span>Angular</span><span>Spring Boot</span><span>Oracle 12c</span><span>PL/SQL</span></div>
+        </article>
+
+        <article class="proj reveal">
+          <div class="proj__head">
+            <h3>Tích hợp Thanh toán BIDV</h3>
+            <span class="proj__role">Backend</span>
+          </div>
+          <p class="proj__client">Ngân hàng BIDV · RESTful API</p>
+          <p>Dịch vụ cung cấp dữ liệu dư nợ khách hàng cho BIDV qua RESTful API; phối hợp đội kỹ thuật ngân hàng kiểm thử tích hợp, đảm bảo bảo mật &amp; chính xác giao dịch.</p>
+          <div class="proj__tags"><span>Spring Boot</span><span>RESTful</span><span>Oracle</span><span>Payment</span></div>
+        </article>
+
+        <article class="proj reveal">
+          <div class="proj__head">
+            <h3>Cổng Thanh toán Payoo</h3>
+            <span class="proj__role">Fullstack</span>
+          </div>
+          <p class="proj__client">e-Payment · Tích hợp cổng thanh toán</p>
+          <p>Phát triển module thanh toán doanh nghiệp tích hợp cổng Payoo: thiết kế luồng thanh toán, UI/UX và xử lý callback/đối soát giao dịch.</p>
+          <div class="proj__tags"><span>Java EE</span><span>Spring MVC</span><span>Payoo</span></div>
+        </article>
+
+        <article class="proj reveal">
+          <div class="proj__head">
+            <h3>Chuyển đổi POS Mobifone</h3>
+            <span class="proj__role">Fullstack</span>
+          </div>
+          <p class="proj__client">Tổng Công ty Viễn thông MobiFone</p>
+          <p>Chuyển đổi phần mềm POS (điểm bán hàng) từ nền tảng Java Applet cũ sang ứng dụng web hiện đại; xây dựng UI component &amp; dịch vụ back-end mới.</p>
+          <div class="proj__tags"><span>Java EE</span><span>ReactJS</span><span>Hibernate</span><span>Oracle</span></div>
+        </article>
+
+        <article class="proj reveal">
+          <div class="proj__head">
+            <h3>API cho ứng dụng Mobile</h3>
+            <span class="proj__role">Backend</span>
+          </div>
+          <p class="proj__client">Dịch vụ tìm kiếm dữ liệu</p>
+          <p>Phát triển &amp; tài liệu hóa API RESTful phục vụ tìm kiếm dữ liệu cho client mobile; tối ưu truy vấn Oracle SQL để tăng tốc độ truy xuất.</p>
+          <div class="proj__tags"><span>Spring Boot</span><span>RESTful</span><span>Oracle</span><span>Swagger</span></div>
+        </article>
+
+        <article class="proj reveal proj--ghost">
+          <div class="proj__head">
+            <h3>+ Dự án của bạn</h3>
+          </div>
+          <p>Còn dự án nào nổi bật khác? Kể cho mình để bổ sung — đặc biệt nếu liên quan thanh toán, giao dịch real-time hay tích hợp thiết bị.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ░░░ EDUCATION ░░░ -->
+    <section class="section" id="education">
+      <div class="section__head reveal">
+        <span class="section__kicker">05 — Nền tảng</span>
+        <h2 class="section__title">Học vấn &amp; Chứng chỉ</h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-col reveal">
+          <h3 class="edu-col__h">🎓 Học vấn</h3>
+          <div class="edu">
+            <div class="edu__top">
+              <strong data-fill="school">Trường / Trung tâm</strong>
+              <span data-fill="school-year">2012 – 2015</span>
+            </div>
+            <p data-fill="major">Chuyên ngành Kỹ thuật phần mềm</p>
+          </div>
+        </div>
+
+        <div class="edu-col reveal">
+          <h3 class="edu-col__h">📜 Chứng chỉ</h3>
+          <ul class="cert">
+            <li>Java — Lập trình hướng đối tượng</li>
+            <li>Cloud Computing — Điện toán đám mây</li>
+            <li>Thuật toán &amp; Cấu trúc dữ liệu</li>
+            <li><span data-fill="cert-extra">Chứng chỉ khác (bổ sung)</span></li>
+          </ul>
+        </div>
+
+        <div class="edu-col reveal">
+          <h3 class="edu-col__h">🌐 Ngoại ngữ</h3>
+          <ul class="lang">
+            <li><span>Tiếng Việt</span><b>Bản ngữ</b></li>
+            <li><span>Tiếng Anh</span><b>Đọc &amp; viết tài liệu kỹ thuật tốt</b></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░░ CONTACT ░░░ -->
+    <section class="section section--alt" id="contact">
+      <div class="section__head reveal">
+        <span class="section__kicker">06 — Kết nối</span>
+        <h2 class="section__title">Liên hệ</h2>
+        <p class="section__sub">Rất mong có cơ hội trao đổi cùng đội ngũ VETC.</p>
+      </div>
+
+      <div class="contact reveal">
+        <a class="contact__card" href="mailto:your.email@gmail.com" data-fill="email-card">
+          <span class="contact__ic">✉</span>
+          <span class="contact__label">Email</span>
+          <span class="contact__val">your.email@gmail.com</span>
+        </a>
+        <a class="contact__card" href="tel:+849xxxxxxxx" data-fill="phone-card">
+          <span class="contact__ic">☎</span>
+          <span class="contact__label">Điện thoại</span>
+          <span class="contact__val">09xx xxx xxx</span>
+        </a>
+        <a class="contact__card" href="#" target="_blank" rel="noopener" data-fill="github-card">
+          <span class="contact__ic">⎇</span>
+          <span class="contact__label">GitHub</span>
+          <span class="contact__val">github.com/username</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> <span data-fill="name-foot">Họ Và Tên</span> — Fullstack Developer.</p>
+    <p class="foot__note">Thiết kế &amp; xây dựng bằng HTML · CSS · JS thuần.</p>
+  </footer>
+
+  <button class="totop" id="toTop" aria-label="Lên đầu trang">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

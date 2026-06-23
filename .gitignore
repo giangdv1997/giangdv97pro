@@ -6,6 +6,8 @@
 Thumbs.db
 .DS_Store
 
-# CV tham chiếu của người khác — KHÔNG commit (tránh lộ thông tin cá nhân khi deploy public)
-CV_PhiLV2_fullstack.pdf
-cv_dev_hien.jpeg
+# Công cụ build "làm rối" (node_modules nặng) — không commit, chỉ chạy local
+.build-obf/
+
+# Ảnh chụp preview PDF (debug) — không phải code
+chk*.png

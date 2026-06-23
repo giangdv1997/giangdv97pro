@@ -24,11 +24,24 @@ Mở `index.html`, tìm (Ctrl+F) chữ **`data-fill`** — đó là tất cả c
 họ tên, email, SĐT, địa chỉ, GitHub, mốc thời gian công ty, trường học, năm tốt nghiệp…
 Số liệu ở Hero (năm KN, số dự án) sửa ở thuộc tính `data-count`.
 
-## 3. Xuất PDF gửi sếp / HR
-1. Mở web → bấm nút **⤓ Tải PDF** (hoặc `Ctrl+P`).
-2. Chọn **Khổ A4**, Margins: *Default*.
-3. **BẬT "Background graphics"** để giữ màu accent.
-4. Save as PDF. Bản in đã được tối ưu riêng (1–2 trang, sạch, dễ đọc cho HR).
+## 3. Xuất PDF gửi sếp / HR (khuyến nghị: dùng tool Python)
+Xuất bằng `gen_pdf.py` cho layout gọn, lề & khoảng cách đều — ổn định hơn Ctrl+P.
+
+```powershell
+# Cài 1 lần
+pip install -r requirements.txt
+python -m playwright install chromium
+
+# Xuất PDF
+python gen_pdf.py                 # -> Duong_Van_Giang_CV.pdf
+python gen_pdf.py -o cv.pdf       # đổi tên file
+python gen_pdf.py --scale 0.95    # ép vào ít trang hơn nếu cần
+```
+
+Tool tự render `index.html` ở chế độ in (A4, lề 10–11mm) và **tự điền số điện thoại
+thật** vào bản PDF (bản web vẫn ẩn sau captcha chống bot).
+
+> Cách thủ công (không khuyến nghị): mở web → `Ctrl+P` → khổ A4, bật *Background graphics*.
 
 ## 4. Deploy lên Cloudflare Pages + domain Namecheap
 1. Đẩy thư mục này lên 1 repo GitHub (hoặc dùng `wrangler`).

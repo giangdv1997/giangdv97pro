@@ -1,21 +1,11 @@
 <!DOCTYPE html>
-<!--
-  ┌─────────────────────────────────────────────────────────────────┐
-  │  CV / PORTFOLIO  —  Fullstack Developer                          │
-  │  ⚠ CẦN ĐIỀN / XÁC NHẬN các chỗ đánh dấu  data-fill  bên dưới:    │
-  │    • Họ tên, chức danh, tagline                                  │
-  │    • Email, SĐT, địa chỉ, link GitHub / website                  │
-  │    • Số năm kinh nghiệm, mốc thời gian các công ty               │
-  │    • Năm tốt nghiệp, trường học                                  │
-  │  Tìm nhanh: search "data-fill" để thấy hết các chỗ cần sửa.      │
-  └─────────────────────────────────────────────────────────────────┘
--->
+<!-- CV - Dương Văn Giang · Fullstack Developer -->
 <html lang="vi">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV — Fullstack Developer</title>
-  <meta name="description" content="Hồ sơ Lập trình viên Fullstack — Java Spring Boot · Angular · Oracle" />
+  <title>CV - Fullstack Developer</title>
+  <meta name="description" content="Hồ sơ Lập trình viên Fullstack - Java Spring Boot · Angular · Oracle" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -57,9 +47,17 @@
     <div class="hero__glow" aria-hidden="true"></div>
 
     <div class="hero__inner">
+      <!-- Ảnh chân dung: đặt file avatar.jpg cạnh index.html; thiếu/lỗi tải sẽ hiện ô placeholder. -->
+      <figure class="hero__photo reveal" id="heroPhoto">
+        <img src="avatar.jpg"
+             alt="Ảnh chân dung Dương Văn Giang - Senior Fullstack Developer"
+             loading="eager"
+             onerror="document.getElementById('heroPhoto').classList.add('is-empty'); this.remove();" />
+      </figure>
+
       <div class="hero__text">
         <p class="hero__hello">
-          <span class="term">~/cv $</span> <span class="type" id="typeLine">whoami</span>
+          <span class="term">~/cv $</span> <span class="type" id="typeLine">oc whoami</span>
         </p>
         <h1 class="hero__name">Dương Văn Giang</h1>
         <h2 class="hero__role">
@@ -67,40 +65,62 @@
           <span class="sep">·</span> Dev Lead
         </h2>
         <p class="hero__tag" data-fill="tagline">
-          Java Spring Boot · Angular · Oracle PL/SQL — 7 năm gắn với hệ thống Đấu thầu
-          Điện tử Quốc gia, 3 năm làm Dev Lead cho dự án của khách hàng chính phủ.
+          Java Spring Boot · Angular · Oracle PL/SQL - gần 7 năm tại IDNES (Dự án Đấu thầu qua mạng Quốc gia), trong đó gần 4 năm ở vai trò Dev Lead.
         </p>
 
         <div class="hero__cta">
-          <a href="#contact" class="btn btn--primary">Liên hệ tôi</a>
+          <!--<a href="#contact" class="btn btn&#45;&#45;primary">Liên hệ tôi</a>-->
           <a href="#projects" class="btn btn--ghost">Xem dự án ↓</a>
         </div>
 
         <ul class="hero__chips">
-          <li><span>✉</span> <a href="mailto:giangdv97@gmail.com">giangdv97@gmail.com</a></li>
-          <li><span>☎</span> <button type="button" class="chip-btn" data-phone><span class="phone-slot">Hiện số điện thoại 🔒</span></button></li>
-          <li><span>⌖</span> <span>Hà Nội, Việt Nam</span></li>
-          <li><span>⎇</span> <a href="https://github.com/giangdv1997" target="_blank" rel="noopener">github.com/giangdv1997</a></li>
-          <li><span>★</span> <a href="https://giangdv97.pro/" target="_blank" rel="noopener">giangdv97.pro</a></li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <a href="mailto:giangdv97@gmail.com">giangdv97@gmail.com</a>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <button type="button" class="chip-btn" data-phone><span class="phone-slot">Hiện số điện thoại</span></button>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <span>22/10/1997</span>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>Nam</span>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <a href="https://giangdv97.pro/" target="_blank" rel="noopener">giangdv97.pro</a>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6 0-.3 0-1.1 0-2.1-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2 0 1.6 0 2.9 0 3.3 0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg>
+            <a href="https://github.com/giangdv1997" target="_blank" rel="noopener">github.com/giangdv1997</a>
+          </li>
+          <li>
+            <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Hà Nội, Việt Nam</span>
+          </li>
         </ul>
       </div>
 
       <div class="hero__stats">
         <div class="stat">
-          <span class="stat__num" data-count="7">7</span><span class="stat__plus">+</span>
-          <span class="stat__label">Năm kinh nghiệm</span>
+          <span class="stat__fig"><span class="stat__num" data-count="7">7</span></span>
+          <span class="stat__label">Năm kinh nghiệm Fullstack</span>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="15">15</span>
-          <span class="stat__label">Lập trình viên trong team</span>
+          <span class="stat__fig"><span class="stat__num" data-count="4">4</span></span>
+          <span class="stat__label">Năm Dev Lead, đồng hành cùng team 15 người</span>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="3">3</span>
-          <span class="stat__label">Năm vai trò Dev Lead</span>
+          <span class="stat__fig"><span class="stat__num" data-count="10">10</span><span class="stat__plus">tr+</span></span>
+          <span class="stat__label">Bản ghi xử lý trên Oracle PL/SQL</span>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="10">10</span><span class="stat__plus">tr+</span>
-          <span class="stat__label">Bản ghi xử lý (SQL)</span>
+          <span class="stat__fig"><span class="stat__num" data-count="99">99</span><span class="stat__plus">.9%</span></span>
+          <span class="stat__label">Uptime, vận hành 24/7</span>
         </div>
       </div>
     </div>
@@ -113,32 +133,18 @@
     <!-- ░░░ ABOUT ░░░ -->
     <section class="section" id="about">
       <div class="section__head reveal">
-        <span class="section__kicker">01 — Giới thiệu</span>
+        <span class="section__kicker">01 - Giới thiệu</span>
         <h2 class="section__title">Mục tiêu nghề nghiệp</h2>
       </div>
       <div class="about reveal">
         <p>
-          Lập trình viên <strong>Fullstack thiên Back-End</strong>, hơn 7 năm làm một sản phẩm lớn —
-          <strong>Hệ thống Đấu thầu Điện tử Quốc gia</strong> tại <strong>FPT Information System (FIS)</strong> – đơn vị IDNES. Phụ trách chính
-          <strong>phân hệ nghiệp vụ lõi (eBid)</strong>, tự làm từ đầu đến cuối hai phân hệ
-          <strong>SPM</strong> và <strong>Báo cáo Thống kê</strong>. Mạnh
-          <strong>Oracle PL/SQL trên dữ liệu lớn</strong> và thiết kế cơ sở dữ liệu.
-        </p>
-        <p>
-          3 năm gần đây làm <strong>Dev Lead</strong>: lên kế hoạch và phân việc cho
-          <strong>team 15 người</strong>, review &amp; merge code cho cả dự án, lo khâu
-          <strong>build – merge – deploy lên production (OpenShift/OKD)</strong>. Cũng là người
-          gỡ vướng kỹ thuật cho team và làm việc với các nhóm khác khi vận hành dự án.
-        </p>
-        <p>
-          Tự tìm hiểu và đưa <strong>AI vào công việc</strong>: viết một loạt công cụ qua 3 đời —
-          <em>jira-auto-agent</em> (tool thuần), <em>maestro</em> (AI theo kiến trúc ReAct + native tool-call),
-          <em>detebu</em> (kiến trúc harness agent); dùng quen <strong>Claude, Cursor, Trae, DeepSeek</strong>.
-        </p>
-        <p>
-          Muốn về <strong>VETC</strong> làm mảng hệ thống giao dịch lớn — cần ổn định cao, xử lý
-          dữ liệu lớn và vận hành production chặt chẽ — đúng những thứ mình đang làm:
-          back-end, Oracle và vận hành.
+          Tôi hướng tới vai trò <strong>Back-End / Technical Lead</strong> cho các hệ thống giao dịch
+          quy mô lớn, thời gian thực và vận hành 24/7 - nơi đề cao độ ổn định, hiệu năng và xử lý
+          dữ liệu lớn. Tôi tìm một môi trường để vừa trực tiếp giải các bài toán kỹ thuật khó, vừa
+          đồng hành cùng đội ngũ và chịu trách nhiệm cho chất lượng vận hành sản phẩm; song song đó
+          tiếp tục đưa <strong>AI vào quy trình phát triển</strong> để nâng năng suất. Định hướng này
+          khớp với những bài toán <strong>VETC</strong> đang giải, và đó là lý do tôi muốn
+          <strong>ứng tuyển vào VETC</strong>.
         </p>
       </div>
     </section>
@@ -146,66 +152,71 @@
     <!-- ░░░ SKILLS ░░░ -->
     <section class="section section--alt" id="skills">
       <div class="section__head reveal">
-        <span class="section__kicker">02 — Năng lực</span>
+        <span class="section__kicker">02 - Năng lực</span>
         <h2 class="section__title">Kỹ năng công nghệ</h2>
-        <p class="section__sub">Toàn diện cả Front-End lẫn Back-End — một fullstack thực thụ.</p>
       </div>
 
       <div class="skills">
         <article class="skill-card reveal">
-          <h3 class="skill-card__title"><span class="skill-card__ic">🖥</span> Front-End</h3>
+          <h3 class="skill-card__title">Front-End</h3>
           <ul class="bars">
             <li data-level="90"><span>Angular 8–14+ / TypeScript</span><i></i></li>
-            <li data-level="80"><span>React · Next.js</span><i></i></li>
-            <li data-level="90"><span>HTML5 · CSS3 · JS ES6+</span><i></i></li>
-            <li data-level="85"><span>Bootstrap · SCSS · RxJS</span><i></i></li>
-            <li data-level="85"><span>Angular Material · Reactive Forms</span><i></i></li>
+            <li data-level="85"><span>NgRx · RxJS</span><i></i></li>
+            <li data-level="80"><span>WebSocket / STOMP (realtime)</span><i></i></li>
+            <li data-level="85"><span>Angular Material · PrimeNG · Ng-Zorro</span><i></i></li>
+            <li data-level="82"><span>OAuth2/OIDC · JWT · RBAC</span><i></i></li>
+            <li data-level="78"><span>React · Next.js</span><i></i></li>
+            <li data-level="90"><span>HTML5 · CSS3 · SCSS · Bootstrap</span><i></i></li>
           </ul>
         </article>
 
         <article class="skill-card reveal">
-          <h3 class="skill-card__title"><span class="skill-card__ic">⚙</span> Back-End</h3>
+          <h3 class="skill-card__title">Back-End</h3>
           <ul class="bars">
             <li data-level="90"><span>Java EE / SE (8, 11, 17)</span><i></i></li>
-            <li data-level="90"><span>Spring Boot · Spring MVC</span><i></i></li>
-            <li data-level="78"><span>Node.js · TypeScript</span><i></i></li>
-            <li data-level="85"><span>Microservices · RabbitMQ</span><i></i></li>
+            <li data-level="90"><span>Spring Boot · Spring MVC · Spring Cloud</span><i></i></li>
+            <li data-level="85"><span>JHipster · Microservices</span><i></i></li>
+            <li data-level="85"><span>RabbitMQ · Redisson (khoá phân tán) · Redis</span><i></i></li>
             <li data-level="88"><span>Hibernate / JPA · RESTful API</span><i></i></li>
-            <li data-level="85"><span>Redis · Quartz Scheduler</span><i></i></li>
+            <li data-level="82"><span>OAuth2 · JWT (Spring Security)</span><i></i></li>
+            <li data-level="90"><span>Node.js · TypeScript · Quartz</span><i></i></li>
           </ul>
         </article>
 
         <article class="skill-card reveal">
-          <h3 class="skill-card__title"><span class="skill-card__ic">🗄</span> Database</h3>
+          <h3 class="skill-card__title">Database</h3>
           <ul class="bars">
             <li data-level="95"><span>Oracle 10g–19c · PL/SQL</span><i></i></li>
-            <li data-level="90"><span>Package · Function · Job · Trigger</span><i></i></li>
-            <li data-level="80"><span>PostgreSQL · pgvector</span><i></i></li>
+            <li data-level="90"><span>Package · Function · Job · Trigger · DBLink</span><i></i></li>
+            <li data-level="82"><span>PostgreSQL · MySQL</span><i></i></li>
             <li data-level="90"><span>Tối ưu truy vấn · Dữ liệu chục triệu bản ghi</span><i></i></li>
             <li data-level="90"><span>Thiết kế CSDL (DB Design)</span><i></i></li>
+            <li data-level="50"><span>pgvector</span><i></i></li>
           </ul>
         </article>
 
         <article class="skill-card reveal">
-          <h3 class="skill-card__title"><span class="skill-card__ic">🛠</span> DevOps &amp; Tools</h3>
+          <h3 class="skill-card__title">DevOps &amp; Tools</h3>
           <ul class="bars">
             <li data-level="90"><span>Git · SVN · CI/CD</span><i></i></li>
             <li data-level="85"><span>RedHat Linux · OpenShift (OKD)</span><i></i></li>
             <li data-level="90"><span>Build · Merge · Deploy Production</span><i></i></li>
-            <li data-level="90"><span>Agile / Scrum · Review &amp; Merge code</span><i></i></li>
+            <li data-level="80"><span>Docker · Jib</span><i></i></li>
+            <li data-level="80"><span>JUnit 5 · Kiểm thử tự động</span><i></i></li>
+            <li data-level="90"><span>Review &amp; Merge code (toàn dự án)</span><i></i></li>
           </ul>
         </article>
 
         <article class="skill-card skill-card--wide reveal">
-          <h3 class="skill-card__title"><span class="skill-card__ic">🤖</span> AI &amp; Tự động hoá quy trình</h3>
+          <h3 class="skill-card__title">AI &amp; Tự động hoá quy trình</h3>
           <p class="skill-card__lead">
-            Tự tìm hiểu và đưa AI vào công việc — viết công cụ riêng qua 3 đời và dùng nhiều
-            AI coding agent để làm nhanh hơn.
+            Tự xây công cụ AI để tăng năng suất - qua 3 giai đoạn tìm hiểu và ứng dụng AI vào công việc. Nắm và áp dụng kiến trúc agent:
+            tool-calling/ReAct, plan-execute, sub-agents, memory &amp; context engineering, tích hợp multi-LLM.
           </p>
           <div class="ai-flow">
-            <span>jira-auto-agent <small>tool thuần (chưa AI)</small></span><i>→</i>
-            <span>maestro <small>AI · ReAct + tool-call</small></span><i>→</i>
-            <span>detebu <small>harness agent</small></span>
+            <span>jira-auto-agent <small>tool thuần</small></span><i>→</i>
+            <span>maestro <small>Node/TS · Express+Socket.IO · hybrid router LLM</small></span><i>→</i>
+            <span>detebu <small>harness agent · multi-LLM · sub-agents</small></span>
           </div>
           <div class="ai-tools">
             <span>Claude</span><span>Cursor</span><span>Trae</span><span>DeepSeek</span>
@@ -215,18 +226,20 @@
       </div>
 
       <div class="tagcloud reveal">
-        <span>Java</span><span>Spring Boot</span><span>Microservices</span><span>Node.js</span>
-        <span>Angular</span><span>React</span><span>Next.js</span><span>TypeScript</span>
-        <span>Oracle PL/SQL</span><span>PostgreSQL</span><span>pgvector</span><span>Redis</span>
-        <span>RabbitMQ</span><span>Hibernate</span><span>DB Design</span><span>OpenShift/OKD</span>
-        <span>Git</span><span>CI/CD</span><span>Code Review</span><span>Dữ liệu lớn</span>
+        <span>Java</span><span>Spring Boot</span><span>Spring Cloud</span><span>JHipster</span>
+        <span>Microservices</span><span>RabbitMQ</span><span>Redisson</span><span>Node.js</span>
+        <span>Angular</span><span>NgRx</span><span>React</span><span>TypeScript</span>
+        <span>WebSocket</span><span>OAuth2/JWT</span><span>Oracle PL/SQL</span><span>PostgreSQL</span>
+        <span>MySQL</span><span>pgvector</span><span>Redis</span><span>Hibernate</span><span>Prisma</span>
+        <span>DB Design</span><span>Docker</span><span>OpenShift/OKD</span><span>CI/CD</span>
+        <span>Code Review</span><span>Dữ liệu lớn</span>
       </div>
     </section>
 
     <!-- ░░░ EXPERIENCE ░░░ -->
     <section class="section" id="experience">
       <div class="section__head reveal">
-        <span class="section__kicker">03 — Hành trình</span>
+        <span class="section__kicker">03 - Hành trình</span>
         <h2 class="section__title">Kinh nghiệm làm việc</h2>
       </div>
 
@@ -236,17 +249,17 @@
           <div class="tl__body">
             <div class="tl__top">
               <h3>Dev Lead <span class="tl__lead">(Technical Lead)</span></h3>
-              <span class="tl__date" data-fill="lead-date">2023 – nay (≈3 năm)</span>
+              <span class="tl__date" data-fill="lead-date">2023 – nay (gần 4 năm)</span>
             </div>
-            <p class="tl__org">FPT Information System (FIS) · IDNES — Dự án Đấu thầu Điện tử Quốc gia</p>
-            <p class="tl__sub">IDNES — Công ty TNHH Đầu tư &amp; Phát triển Hệ thống Đấu thầu qua mạng Quốc gia</p>
+            <p class="tl__org">FPT Information System (FIS) · IDNES - Dự án Đấu thầu qua mạng Quốc gia</p>
+            <p class="tl__sub">IDNES - Công ty TNHH Đầu tư &amp; Phát triển Hệ thống Đấu thầu qua mạng Quốc gia</p>
             <ul class="tl__list">
               <li>Lập kế hoạch &amp; điều phối công việc cho <strong>team 15 lập trình viên</strong>; quản lý tiến độ các bản build.</li>
               <li>Lập plan triển khai các phần mới khi <strong>thay đổi Thông tư / nghiệp vụ</strong> đấu thầu.</li>
-              <li>Là người trả lời các vướng mắc kỹ thuật cho team và trực tiếp xử lý các issue khó.</li>
+              <li><strong>Đầu mối giải đáp vướng mắc kỹ thuật</strong> cho team, trực tiếp xử lý các issue khó.</li>
               <li>Làm việc với các team khác để gỡ vướng cho team dev trong quá trình vận hành dự án.</li>
-              <li>Phản biện tài liệu từ <strong>BA</strong> — đánh giá tính khả thi trước khi quyết định triển khai.</li>
-              <li><strong>Review &amp; merge code cho toàn bộ dự án</strong>; lập checklist build, merge &amp; deploy code production.</li>
+              <li>Phản biện tài liệu từ <strong>BA</strong> - đánh giá tính khả thi trước khi quyết định triển khai.</li>
+              <li><strong>Review &amp; merge code cho toàn bộ dự án</strong>; lập checklist build, merge &amp; deploy production - đóng gói <strong>Docker/Jib</strong> lên <strong>OpenShift</strong>.</li>
               <li>Vận hành production: kiểm tra log trên <strong>OpenShift (OKD)</strong>, xử lý sự cố.</li>
             </ul>
             <div class="tl__tags"><span>Leadership</span><span>Code Review</span><span>OpenShift/OKD</span><span>CI/CD</span></div>
@@ -258,18 +271,34 @@
           <div class="tl__body">
             <div class="tl__top">
               <h3>Senior Fullstack Developer</h3>
-              <span class="tl__date" data-fill="senior-date">2019 – 2023</span>
+              <span class="tl__date" data-fill="senior-date">2021 – 2023</span>
             </div>
-            <p class="tl__org">FPT Information System (FIS) · IDNES — Dự án Đấu thầu Điện tử Quốc gia</p>
+            <p class="tl__org">FPT Information System (FIS) · IDNES - Dự án Đấu thầu qua mạng Quốc gia</p>
             <ul class="tl__list">
               <li><strong>Phụ trách chính phân hệ eBid</strong>: Dự án, Kế hoạch LCNT, Thông báo mời thầu (TBMT), Tổ chuyên gia, lập &amp; trình phê duyệt HSMT, Kết quả lựa chọn nhà thầu (KQLCNT).</li>
-              <li>Tự làm <strong>cả phân hệ SPM</strong> (Front-End + Back-End) và toàn bộ <strong>back-end phân hệ Báo cáo Thống kê</strong> (nặng SQL).</li>
+              <li>Tự xây dựng <strong>cả phân hệ SPM</strong> (Front-End + Back-End) và toàn bộ <strong>back-end phân hệ Báo cáo Thống kê</strong> (thiên về xử lý SQL).</li>
               <li><strong>Thiết kế cơ sở dữ liệu</strong> cho các phân hệ eBid, Thống kê &amp; SPM.</li>
               <li>Tham gia xây dựng <strong>job/API thống kê dữ liệu đấu thầu cho C12 – Bộ Tài chính</strong>: package, function, job xử lý các bảng <strong>hàng chục triệu bản ghi</strong>.</li>
-              <li>Trong hệ <strong>microservices</strong>: dùng <strong>Redis</strong> xử lý race condition (khoá phân tán), <strong>RabbitMQ</strong> làm hàng đợi giao tiếp fire-and-forget &amp; gọi chéo giữa các service, <strong>Quartz</strong> chạy job/báo cáo định kỳ.</li>
+              <li>Trong hệ <strong>microservices</strong> (nền tảng <strong>JHipster</strong>): dùng <strong>Redisson</strong> xử lý race condition (khoá phân tán), <strong>RabbitMQ</strong> làm hàng đợi giao tiếp fire-and-forget &amp; gọi chéo giữa các service, <strong>Quartz</strong> chạy job/báo cáo định kỳ.</li>
               <li>Front-End <strong>Angular + TypeScript</strong>, Back-End <strong>Java Spring Boot</strong>, <strong>Oracle PL/SQL</strong>.</li>
             </ul>
             <div class="tl__tags"><span>Angular</span><span>Spring Boot</span><span>Oracle PL/SQL</span><span>DB Design</span></div>
+          </div>
+        </article>
+
+        <article class="tl reveal">
+          <div class="tl__dot"></div>
+          <div class="tl__body">
+            <div class="tl__top">
+              <h3>Fullstack Developer</h3>
+              <span class="tl__date">Cuối 2019 - 2021</span>
+            </div>
+            <p class="tl__org">FPT Information System (FIS) · IDNES - Dự án Đấu thầu qua mạng Quốc gia</p>
+            <ul class="tl__list">
+              <li>Bắt đầu tại dự án; phát triển tính năng Front-End (<strong>Angular</strong>) và Back-End (<strong>Spring Boot</strong>) trên Hệ thống Đấu thầu qua mạng Quốc gia.</li>
+              <li>Làm quen nghiệp vụ đấu thầu, kiến trúc hệ thống và quy trình build/release.</li>
+            </ul>
+            <div class="tl__tags"><span>Angular</span><span>Spring Boot</span><span>Oracle</span></div>
           </div>
         </article>
       </div>
@@ -278,19 +307,19 @@
     <!-- ░░░ PROJECTS ░░░ -->
     <section class="section section--alt" id="projects">
       <div class="section__head reveal">
-        <span class="section__kicker">04 — Sản phẩm</span>
+        <span class="section__kicker">04 - Sản phẩm</span>
         <h2 class="section__title">Dự án tiêu biểu</h2>
       </div>
 
       <div class="projects">
         <article class="proj reveal">
           <div class="proj__head">
-            <h3>eBid — Phân hệ nghiệp vụ trọng tâm</h3>
+            <h3>eBid - Phân hệ nghiệp vụ trọng tâm</h3>
             <span class="proj__role">Owner</span>
           </div>
-          <p class="proj__client">Hệ thống Đấu thầu Điện tử Quốc gia</p>
-          <p>Sở hữu toàn bộ phân hệ cốt lõi: Dự án, Kế hoạch lựa chọn nhà thầu (LCNT), Thông báo mời thầu (TBMT), Tổ chuyên gia, lập &amp; trình phê duyệt HSMT, Kết quả lựa chọn nhà thầu (KQLCNT) — kèm thiết kế CSDL.</p>
-          <div class="proj__tags"><span>Angular</span><span>Spring Boot</span><span>Oracle</span><span>PL/SQL</span></div>
+          <p class="proj__client">Hệ thống Đấu thầu qua mạng Quốc gia</p>
+          <p>Phụ trách toàn bộ nghiệp vụ cốt lõi: Dự án, Kế hoạch lựa chọn nhà thầu (LCNT), Thông báo mời thầu (TBMT), Tổ chuyên gia, lập &amp; trình phê duyệt HSMT, Kết quả lựa chọn nhà thầu (KQLCNT) - kèm thiết kế CSDL.</p>
+          <div class="proj__tags"><span>Angular</span><span>NgRx</span><span>WebSocket</span><span>Spring Boot</span><span>Oracle PL/SQL</span></div>
         </article>
 
         <article class="proj reveal">
@@ -298,9 +327,9 @@
             <h3>Phân hệ SPM</h3>
             <span class="proj__role">Fullstack</span>
           </div>
-          <p class="proj__client">Hệ thống Đấu thầu Điện tử Quốc gia</p>
-          <p>Tự xây dựng trọn vẹn một phân hệ từ giao diện Angular đến back-end Spring Boot và thiết kế cơ sở dữ liệu — làm chủ end-to-end.</p>
-          <div class="proj__tags"><span>Angular</span><span>Spring Boot</span><span>Oracle</span><span>DB Design</span></div>
+          <p class="proj__client">Hệ thống Đấu thầu qua mạng Quốc gia</p>
+          <p>Tự xây dựng trọn vẹn một phân hệ từ giao diện Angular đến back-end Spring Boot và thiết kế cơ sở dữ liệu - làm chủ end-to-end.</p>
+          <div class="proj__tags"><span>Angular</span><span>NgRx</span><span>Spring Boot</span><span>Oracle</span><span>DB Design</span></div>
         </article>
 
         <article class="proj reveal">
@@ -308,17 +337,17 @@
             <h3>Phân hệ Báo cáo &amp; Thống kê</h3>
             <span class="proj__role">Backend</span>
           </div>
-          <p class="proj__client">Hệ thống Đấu thầu Điện tử Quốc gia</p>
-          <p>Xây dựng toàn bộ back-end cho phân hệ báo cáo thống kê; nghiệp vụ nặng về SQL, tối ưu truy vấn trên khối dữ liệu lớn.</p>
+          <p class="proj__client">Hệ thống Đấu thầu qua mạng Quốc gia</p>
+          <p>Xây dựng toàn bộ back-end cho phân hệ báo cáo thống kê; nghiệp vụ thiên về SQL, tối ưu truy vấn trên khối dữ liệu lớn.</p>
           <div class="proj__tags"><span>Spring Boot</span><span>Oracle PL/SQL</span><span>Reporting</span></div>
         </article>
 
         <article class="proj reveal">
           <div class="proj__head">
-            <h3>Job API Thống kê Đấu thầu — C12</h3>
+            <h3>Job API Thống kê Đấu thầu - C12</h3>
             <span class="proj__role">Backend · Data</span>
           </div>
-          <p class="proj__client">C12 — Bộ Tài chính</p>
+          <p class="proj__client">C12 - Bộ Tài chính</p>
           <p>Xây dựng job/API tổng hợp dữ liệu đấu thầu; xử lý SQL phức tạp bằng package, function &amp; job trên các bảng hàng chục triệu bản ghi.</p>
           <div class="proj__tags"><span>Oracle</span><span>PL/SQL</span><span>Package/Job</span><span>Big Data</span></div>
         </article>
@@ -329,15 +358,18 @@
             <span class="proj__role">Cá nhân</span>
           </div>
           <p class="proj__client">jira-auto-agent · maestro · detebu</p>
-          <p>Ba đời công cụ tự viết: jira-auto-agent (tool thuần, chưa AI) → maestro (AI theo kiến trúc ReAct + native tool-call) → detebu (kiến trúc harness agent). Dùng Claude, Cursor, Trae, DeepSeek.</p>
-          <div class="proj__tags"><span>AI Agents</span><span>Automation</span><span>Claude</span><span>Cursor</span></div>
+          <p>Ba thế hệ công cụ tự xây: <strong>jira-auto-agent</strong> (tool thuần, chưa AI) → <strong>maestro</strong> (orchestrator AI cho Dev Lead - Node/TS, Express + Socket.IO, hybrid router token + LLM, confirm bắt buộc trước mọi thao tác ghi) → <strong>detebu</strong> (AI agent harness kiểu Claude Code - multi-LLM Claude/OpenAI/Gemini/DeepSeek, sub-agents, memory &amp; context compaction, tích hợp Jira/OpenShift/GitLab).</p>
+          <div class="proj__tags"><span>AI Agents</span><span>Harness</span><span>Multi-LLM</span><span>Automation</span></div>
         </article>
 
-        <article class="proj reveal proj--ghost">
+        <article class="proj reveal">
           <div class="proj__head">
-            <h3>+ Còn nữa</h3>
+            <h3>Module cơ sở phân hệ UM &amp; CT</h3>
+            <span class="proj__role">Backend</span>
           </div>
-          <p>Giang kể thêm chi tiết (con số, vai trò, công nghệ) là mình bổ sung / làm nổi bật ngay.</p>
+          <p class="proj__client">Hệ thống Đấu thầu qua mạng Quốc gia</p>
+          <p>Xây dựng các module nền tảng dùng chung cho phân hệ <strong>UM</strong> (Quản lý người dùng) và <strong>CT</strong> - phục vụ các phân hệ nghiệp vụ khác kế thừa &amp; tái sử dụng.</p>
+          <div class="proj__tags"><span>Spring Boot</span><span>Oracle</span><span>Core Module</span></div>
         </article>
       </div>
     </section>
@@ -345,43 +377,43 @@
     <!-- ░░░ ACHIEVEMENTS ░░░ -->
     <section class="section" id="achievements">
       <div class="section__head reveal">
-        <span class="section__kicker">05 — Ghi nhận</span>
+        <span class="section__kicker">05 - Ghi nhận</span>
         <h2 class="section__title">Thành tích nổi bật</h2>
       </div>
 
       <div class="metrics reveal">
         <div class="stat">
-          <span class="stat__num" data-count="99">99</span><span class="stat__plus">.9%</span>
+          <span class="stat__fig"><span class="stat__num" data-count="99">99</span><span class="stat__plus">.9%</span></span>
           <span class="stat__label">Uptime hệ thống</span>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="5">5</span><span class="stat__plus"> năm</span>
+          <span class="stat__fig"><span class="stat__num" data-count="5">5</span><span class="stat__plus">&nbsp;năm</span></span>
           <span class="stat__label">Nhân viên xuất sắc liên tục</span>
         </div>
         <div class="stat">
-          <span class="stat__num" data-count="4">4</span><span class="stat__plus">/5</span>
+          <span class="stat__fig"><span class="stat__num" data-count="4">4</span><span class="stat__plus">/5</span></span>
           <span class="stat__label">Điểm đánh giá hàng tháng</span>
         </div>
       </div>
 
       <ul class="cert reveal">
-        <li><strong>Nhân viên xuất sắc 5 năm liền</strong>: cấp khối EP (2021–2024), lên cấp FIS năm 2025 — <em>EP &amp; FIS thuộc FPT Information System (FIS)</em>.</li>
+        <li><strong>Nhân viên xuất sắc 5 năm liền</strong>: cấp khối EP (2021–2024), lên cấp FIS năm 2025 - <em>EP &amp; FIS thuộc FPT Information System (FIS)</em>.</li>
         <li>Điểm đánh giá hiệu suất hàng tháng luôn đạt <strong>≥ 4/5</strong>.</li>
-        <li>Nhiều <strong>thưởng nóng</strong> cá nhân &amp; đội nhóm từ quản lý.</li>
-        <li>Vận hành hệ thống đạt <strong>uptime ~99.9%</strong>, hạn chế sự cố phần mềm gây nghẽn luồng nghiệp vụ.</li>
+        <li>Nhiều lần được <strong>thưởng nóng</strong> (cá nhân &amp; đội nhóm) từ quản lý.</li>
+        <li>Giữ hệ thống vận hành ổn định, <strong>hạn chế tối đa sự cố</strong> gây nghẽn luồng nghiệp vụ.</li>
       </ul>
     </section>
 
     <!-- ░░░ EDUCATION ░░░ -->
-    <section class="section" id="education">
+    <section class="section section--alt" id="education">
       <div class="section__head reveal">
-        <span class="section__kicker">06 — Nền tảng</span>
+        <span class="section__kicker">06 - Nền tảng</span>
         <h2 class="section__title">Học vấn &amp; Thế mạnh</h2>
       </div>
 
       <div class="edu-grid">
         <div class="edu-col reveal">
-          <h3 class="edu-col__h">🎓 Học vấn</h3>
+          <h3 class="edu-col__h">Học vấn</h3>
           <div class="edu">
             <div class="edu__top">
               <strong>Trường Đại học Công nghiệp Hà Nội</strong>
@@ -391,18 +423,18 @@
         </div>
 
         <div class="edu-col reveal">
-          <h3 class="edu-col__h">💪 Thế mạnh nổi bật</h3>
+          <h3 class="edu-col__h">Thế mạnh nổi bật</h3>
           <ul class="cert">
             <li>Nắm chắc nghiệp vụ đấu thầu (LCNT · HSMT · KQLCNT) từ đầu đến cuối</li>
             <li>Oracle PL/SQL mạnh: package/function/job trên dữ liệu chục triệu bản ghi</li>
-            <li>3 năm Dev Lead: lên plan, phân việc team 15, review &amp; merge cả dự án</li>
+            <li>Gần 4 năm Dev Lead: lên plan, phân việc team 15, review &amp; merge cả dự án</li>
             <li>Vận hành production (OpenShift/OKD), xử lý sự cố</li>
-            <li>Đưa AI vào quy trình phát triển phần mềm</li>
+            <li>Tự xây công cụ AI agent (multi-LLM), đưa AI vào quy trình phát triển</li>
           </ul>
         </div>
 
         <div class="edu-col reveal">
-          <h3 class="edu-col__h">🌐 Ngoại ngữ</h3>
+          <h3 class="edu-col__h">Ngoại ngữ</h3>
           <ul class="lang">
             <li><span>Tiếng Việt</span><b>Bản ngữ</b></li>
             <li><span>Tiếng Anh</span><b>Đọc &amp; viết tài liệu kỹ thuật tốt</b></li>
@@ -414,34 +446,30 @@
     <!-- ░░░ STORIES (web-only) ░░░ -->
     <section class="section section--web" id="stories">
       <div class="section__head reveal">
-        <span class="section__kicker">✦ — Bên lề</span>
+        <span class="section__kicker">07 - Bên lề</span>
         <h2 class="section__title">Chuyện nghề ở IDNES</h2>
-        <p class="section__sub">Vài mảnh ký ức không nằm trong gạch đầu dòng — nhưng làm nên 7 năm vừa qua.</p>
+        <p class="section__sub">Vài mảnh ký ức không nằm trong gạch đầu dòng - nhưng làm nên gần 7 năm vừa qua.</p>
       </div>
 
       <div class="stories">
         <article class="story reveal">
-          <span class="story__ic">🌙</span>
           <h3 class="story__t">Đêm trước mỗi lần golive Thông tư</h3>
-          <p>Cứ mỗi đợt Thông tư mới đổi nghiệp vụ, cả team gần như thức trắng để kịp golive đúng hạn. Cà phê, màn hình đầy log, tiếng bàn phím tới sáng — rồi khi hệ thống lên production chạy mượt, bao nhiêu mệt mỏi tự nhiên tan hết.</p>
+          <p>Cứ mỗi đợt Thông tư mới đổi nghiệp vụ, cả team gần như thức trắng để kịp golive đúng hạn. Khổ nhất là build front-end - project Angular phình to quá cỡ, build lỗi lên lỗi xuống, sửa xong lại ngồi chờ mòn mỏi cả chục phút mới biết qua hay chưa. Cà phê, màn hình đầy log, tiếng bàn phím tới sáng - rồi khi hệ thống lên production chạy mượt, bao nhiêu mệt mỏi tự nhiên tan hết.</p>
         </article>
 
         <article class="story reveal">
-          <span class="story__ic">🐛</span>
-          <h3 class="story__t">Con bug lúc 2 giờ sáng</h3>
-          <p>Những con bug khó nhất hay xuất hiện đúng lúc nửa đêm. Cả nhóm ngồi lại, chia nhau soi log, dựng lại từng luồng, thử đi thử lại… Đến khi “tóm” được nguyên nhân thì trời cũng gần sáng — và cái cảm giác sướng lúc đó thì khó mà tả.</p>
+          <h3 class="story__t">Con bug lúc 10 giờ đêm</h3>
+          <p>Có hôm 10 giờ đêm, dính một con bug oái oăm - tự mình code, rồi tự mình gặp. Ngồi debug nát cả code, lật từng dòng, thử đủ cách vẫn không ra. Cuối cùng hoá ra lỗi chẳng nằm ở mình, mà ở chính thư viện đang dùng. Lúc tìm ra vừa nhẹ nhõm vừa tức cười - mất mấy tiếng chỉ để phát hiện mình… không sai.</p>
         </article>
 
         <article class="story reveal">
-          <span class="story__ic">🌅</span>
           <h3 class="story__t">Bầu trời mới mang tên AI</h3>
-          <p>Ngày anh Như mang AI vào dự án, mình như nhìn thấy một bầu trời hoàn toàn mới. Hóa ra cách mình vẫn làm việc bao năm có thể thay đổi tận gốc — vừa tò mò, vừa hơi choáng, nhưng cuốn hút lạ thường.</p>
+          <p>Ngày một người anh giấu mặt (tên Như) mang AI vào dự án, mình như nhìn thấy một bầu trời hoàn toàn mới. Hoá ra cách mình làm việc bao năm có thể thay đổi tận gốc. Mê tới mức tận dụng từng chút token, “bào” cho bằng cạn gói mới thôi - vừa tò mò, vừa hơi choáng, mà cuốn hút lạ thường.</p>
         </article>
 
         <article class="story reveal">
-          <span class="story__ic">💡</span>
           <h3 class="story__t">Khoảnh khắc vỡ lẽ</h3>
-          <p>Đến lúc tự tay viết con tool AI agent đầu tiên, mình mới thật sự “vỡ lẽ”: hóa ra không chỉ dùng AI, mình hoàn toàn có thể tự xây ra nó. Chặng đường từ jira-auto-agent tới detebu là chuỗi những lần vỡ lẽ như thế — và mình vẫn đang đi tiếp.</p>
+          <p>Đến lúc tự tay viết con tool AI agent đầu tiên, mình mới thật sự “vỡ lẽ”: không chỉ dùng AI, mình hoàn toàn có thể tự build ra tay chân cho nó. Càng đào sâu càng tiếp thu được nhiều - nhìn lại mới thấy ngày đầu mình ngây thơ tới mức nào. Có giai đoạn còn bị ChatGPT “gài” cho mơ mộng tự build một SaaS để đời, đã tính nghỉ việc đang làm; rồi vỡ mộng, và đó lại là bài học đáng giá nhất - tiền không đến từ sản phẩm “tốt”, mà từ sản phẩm giải quyết được một nỗi đau thật của người dùng. Chặng đường từ jira-auto-agent tới detebu là chuỗi những lần vỡ lẽ như thế - và mình vẫn đang đi tiếp.</p>
         </article>
       </div>
     </section>
@@ -449,48 +477,47 @@
     <!-- ░░░ CONTACT ░░░ -->
     <section class="section section--alt" id="contact">
       <div class="section__head reveal">
-        <span class="section__kicker">07 — Kết nối</span>
+        <span class="section__kicker">08 - Kết nối</span>
         <h2 class="section__title">Liên hệ</h2>
         <p class="section__sub">Rất mong có cơ hội trao đổi cùng đội ngũ VETC.</p>
       </div>
 
       <div class="contact reveal">
         <a class="contact__card" href="mailto:giangdv97@gmail.com">
-          <span class="contact__ic">✉</span>
+          <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
           <span class="contact__label">Email</span>
           <span class="contact__val">giangdv97@gmail.com</span>
         </a>
         <button type="button" class="contact__card" data-phone>
-          <span class="contact__ic">☎</span>
+          <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
           <span class="contact__label">Điện thoại</span>
-          <span class="contact__val phone-slot">Bấm để hiện 🔒</span>
+          <span class="contact__val phone-slot">Hiện số điện thoại</span>
         </button>
-        <a class="contact__card" href="https://github.com/giangdv1997" target="_blank" rel="noopener">
-          <span class="contact__ic">⎇</span>
-          <span class="contact__label">GitHub</span>
-          <span class="contact__val">github.com/giangdv1997</span>
-        </a>
         <a class="contact__card" href="https://giangdv97.pro/" target="_blank" rel="noopener">
-          <span class="contact__ic">★</span>
+          <span class="contact__ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
           <span class="contact__label">Website</span>
           <span class="contact__val">giangdv97.pro</span>
+        </a>
+        <a class="contact__card" href="https://github.com/giangdv1997" target="_blank" rel="noopener">
+          <span class="contact__ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6 0-.3 0-1.1 0-2.1-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.2-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.6.2 2.8.1 3.1.8.9 1.2 1.9 1.2 3.2 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2 0 1.6 0 2.9 0 3.3 0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></span>
+          <span class="contact__label">GitHub</span>
+          <span class="contact__val">github.com/giangdv1997</span>
         </a>
       </div>
 
       <div class="refs reveal">
         <h3 class="refs__h">Người tham chiếu</h3>
         <ul class="refs__list">
-          <li><strong>Bành Trọng Văn</strong> — Trưởng phòng Vận hành, FPT IS<span class="refs__mask"> · vanbt8@fp****</span><span class="refs__mail"> · VanBT8@fpt.com</span></li>
-          <li><strong>La Văn Phi</strong> — Phó phòng, FPT IS<span class="refs__mask"> · philv2@fp****</span><span class="refs__mail"> · PhiLV2@fpt.com</span></li>
+          <li><strong>Bành Trọng Văn</strong> - Trưởng phòng Vận hành và phát triển ứng dụng tại IDNES<span class="refs__mask"> · vanbt8@fp****</span><span class="refs__mail"> · VanBT8@fpt.com</span></li>
+          <li><strong>La Văn Phi</strong> - Nguyên Phó phòng Vận hành và phát triển ứng dụng tại IDNES<span class="refs__mask"> · philv2@fp****</span><span class="refs__mail"> · PhiLV2@fpt.com</span></li>
         </ul>
-        <p class="refs__note">Email rút gọn để chống bot — bản đầy đủ có trong PDF gửi HR.</p>
       </div>
     </section>
   </main>
 
   <footer class="foot">
-    <p>© <span id="year"></span> Dương Văn Giang — Fullstack Developer.</p>
-    <p class="foot__note">Thiết kế &amp; xây dựng bằng HTML · CSS · JS thuần.</p>
+    <p>© <span id="year"></span> Dương Văn Giang - Fullstack Developer.</p>
+    <p class="foot__note"></p>
   </footer>
 
   <!-- ░░░ MODAL: captcha toán học cho SĐT ░░░ -->
@@ -498,8 +525,8 @@
     <div class="modal__overlay" data-close></div>
     <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="phoneModalTitle">
       <button class="modal__x" data-close aria-label="Đóng">✕</button>
-      <h3 id="phoneModalTitle">Xác minh bạn là người thật 🤖</h3>
-      <p class="modal__desc">Giải phép tính để xem số điện thoại (chống bot thu thập tự động):</p>
+      <h3 id="phoneModalTitle">Xác minh bạn là người thật</h3>
+      <p class="modal__desc">Giải phép tính để xem số điện thoại:</p>
       <div class="modal__math"><span id="mathQ">? + ? = ?</span></div>
       <input type="number" id="mathA" class="modal__input" placeholder="Nhập kết quả" autocomplete="off" inputmode="numeric" />
       <p class="modal__err" id="mathErr" hidden>Sai rồi, thử lại nhé!</p>

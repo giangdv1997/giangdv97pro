@@ -1,0 +1,2 @@
+# Công cụ xuất CV ra PDF (gen_pdf.py) — dựng thủ công, không cần Chromium
+reportlab>=4.0

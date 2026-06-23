@@ -219,6 +219,25 @@ img { max-width: 100%; }
 }
 .bars li.show i::after { width: var(--w); }
 
+/* AI / wide skill card */
+.skill-card--wide { grid-column: 1 / -1; }
+.skill-card__lead { color: var(--text-soft); font-size: .95rem; margin-bottom: 1.1rem; }
+.ai-flow { display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; margin-bottom: 1rem; }
+.ai-flow span {
+  font-family: var(--mono); font-size: .82rem; font-weight: 600;
+  padding: .4rem .85rem; border-radius: 14px;
+  background: var(--accent-soft); color: var(--accent-deep); border: 1px solid transparent;
+  display: inline-flex; flex-direction: column; line-height: 1.25;
+}
+.ai-flow span small { font-size: .66rem; font-weight: 400; opacity: .8; }
+[data-theme="dark"] .ai-flow span { color: var(--accent); }
+.ai-flow i { color: var(--accent); font-style: normal; font-weight: 700; font-size: 1rem; }
+.ai-tools { display: flex; flex-wrap: wrap; gap: .5rem; }
+.ai-tools span {
+  font-family: var(--mono); font-size: .76rem; padding: .3rem .7rem; border-radius: 6px;
+  border: 1px solid var(--line); color: var(--text-soft);
+}
+
 .tagcloud { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 2rem; }
 .tagcloud span {
   font-family: var(--mono); font-size: .8rem; padding: .45rem .85rem; border-radius: 999px;
@@ -255,6 +274,7 @@ img { max-width: 100%; }
 }
 [data-theme="dark"] .tl__date { color: var(--accent); }
 .tl__org { color: var(--text-soft); font-weight: 600; margin: .3rem 0 .9rem; }
+.tl__sub { font-size: .8rem; color: var(--text-soft); margin: -.6rem 0 .9rem; opacity: .85; }
 .tl__list { list-style: none; display: grid; gap: .55rem; }
 .tl__list li { position: relative; padding-left: 1.3rem; color: var(--text-soft); font-size: .96rem; }
 .tl__list li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
@@ -332,6 +352,31 @@ img { max-width: 100%; }
 .contact__label { font-size: .78rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-soft); }
 .contact__val { font-weight: 700; word-break: break-word; }
 
+/* ---------- Achievements (Thành tích) ---------- */
+.metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.8rem; }
+
+/* ---------- Người tham chiếu ---------- */
+.refs { margin-top: 2rem; }
+.refs__h { font-size: 1.05rem; margin-bottom: .8rem; }
+.refs__list { list-style: none; display: grid; gap: .5rem; }
+.refs__list li { color: var(--text-soft); font-size: .95rem; }
+.refs__list strong { color: var(--text); }
+.refs__mail { display: none; }            /* ẩn trên web (chống bot), hiện khi in PDF */
+.refs__mask { color: var(--text-soft); }  /* email rút gọn hiện trên web */
+.refs__note { font-size: .82rem; color: var(--text-soft); margin-top: .6rem; opacity: .85; }
+
+/* ---------- Chuyện nghề (chỉ hiện trên web) ---------- */
+.stories { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem; }
+.story {
+  background: var(--surface); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: var(--radius); padding: 1.5rem 1.6rem; box-shadow: var(--shadow);
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.story:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); border-color: var(--accent); }
+.story__ic { font-size: 1.7rem; }
+.story__t { font-size: 1.08rem; margin: .5rem 0; }
+.story p { color: var(--text-soft); font-size: .96rem; line-height: 1.75; }
+
 /* ---------- Footer ---------- */
 .foot {
   text-align: center; padding: 2.4rem 1rem; border-top: 1px solid var(--line);
@@ -396,7 +441,7 @@ img { max-width: 100%; }
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .hero__inner { grid-template-columns: 1fr; }
-  .skills, .projects, .edu-grid, .contact { grid-template-columns: 1fr; }
+  .skills, .projects, .edu-grid, .contact, .stories { grid-template-columns: 1fr; }
   .nav__links {
     position: fixed; inset: 64px 0 auto 0; flex-direction: column; gap: 0;
     background: var(--bg-alt); border-bottom: 1px solid var(--line); padding: .5rem;
@@ -423,7 +468,7 @@ img { max-width: 100%; }
   @page { size: A4; margin: 12mm 12mm; }
 
   .nav, .modal, .hero__scroll, .hero__cta, .totop, #burger,
-  .hero__grid, .hero__glow, .proj--ghost, .section__kicker { display: none !important; }
+  .hero__grid, .hero__glow, .proj--ghost, .section--web, .section__kicker { display: none !important; }
   .chip-btn { border-bottom: none; }
 
   body { background: #fff; font-size: 11px; line-height: 1.45; }
@@ -457,5 +502,9 @@ img { max-width: 100%; }
   .contact { grid-template-columns: repeat(2, 1fr); }
   .foot { border: none; padding: 8px 0 0; }
   .totop, .icon-btn { display: none !important; }
+  .refs__mail { display: inline; }
+  .refs__mask { display: none; }
+  .refs__note { display: none; }
+  .metrics { grid-template-columns: repeat(3, 1fr); gap: .4rem; }
   a { color: var(--text) !important; }
 }

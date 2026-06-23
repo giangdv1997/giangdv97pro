@@ -96,7 +96,7 @@
   /* ---------- Hiệu ứng gõ chữ ở dòng terminal ---------- */
   const typeEl = $('#typeLine');
   if (typeEl) {
-    const words = ['whoami', 'fullstack --skills', 'cat strengths.md', 'deploy --to vetc'];
+    const words = ['oc whoami', 'mcp__dev_fullstack --IDNES', 'cli deploy --to VETC', ''];
     let wi = 0, ci = 0, deleting = false;
     const loop = () => {
       const w = words[wi];

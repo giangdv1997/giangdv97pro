@@ -5,3 +5,7 @@
 # OS
 Thumbs.db
 .DS_Store
+
+# CV tham chiếu của người khác — KHÔNG commit (tránh lộ thông tin cá nhân khi deploy public)
+CV_PhiLV2_fullstack.pdf
+cv_dev_hien.jpeg

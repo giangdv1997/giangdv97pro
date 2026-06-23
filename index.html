@@ -30,7 +30,7 @@
   <header class="nav" id="nav">
     <a href="#hero" class="nav__brand">
       <span class="nav__logo">&lt;/&gt;</span>
-      <span data-fill="name-short">Họ Tên</span>
+      <span>Dương Văn Giang</span>
     </a>
     <nav class="nav__links" aria-label="Mục lục">
       <a href="#about">Giới thiệu</a>
@@ -59,7 +59,7 @@
         <p class="hero__hello">
           <span class="term">~/cv $</span> <span class="type" id="typeLine">whoami</span>
         </p>
-        <h1 class="hero__name" data-fill="name">Họ Và Tên Của Bạn</h1>
+        <h1 class="hero__name">Dương Văn Giang</h1>
         <h2 class="hero__role">
           <span class="grad">Senior Fullstack Developer</span>
           <span class="sep">·</span> Tech Lead
@@ -75,16 +75,17 @@
         </div>
 
         <ul class="hero__chips">
-          <li><span>✉</span> <a href="mailto:your.email@gmail.com" data-fill="email">your.email@gmail.com</a></li>
-          <li><span>☎</span> <a href="tel:+849xxxxxxxx" data-fill="phone">09xx xxx xxx</a></li>
-          <li><span>⌖</span> <span data-fill="location">Hà Nội, Việt Nam</span></li>
-          <li><span>⎇</span> <a href="#" target="_blank" rel="noopener" data-fill="github">github.com/username</a></li>
+          <li><span>✉</span> <a href="mailto:giangdv97@gmail.com">giangdv97@gmail.com</a></li>
+          <li><span>☎</span> <button type="button" class="chip-btn" data-phone><span class="phone-slot">Hiện số điện thoại 🔒</span></button></li>
+          <li><span>⌖</span> <span>Hà Nội, Việt Nam</span></li>
+          <li><span>⎇</span> <a href="https://github.com/giangdv1997" target="_blank" rel="noopener">github.com/giangdv1997</a></li>
+          <li><span>★</span> <a href="https://giangdv97.pro/" target="_blank" rel="noopener">giangdv97.pro</a></li>
         </ul>
       </div>
 
       <div class="hero__stats">
         <div class="stat">
-          <span class="stat__num" data-count="9">9</span><span class="stat__plus">+</span>
+          <span class="stat__num" data-count="7">7</span><span class="stat__plus">+</span>
           <span class="stat__label">Năm kinh nghiệm</span>
         </div>
         <div class="stat">
@@ -115,7 +116,7 @@
       </div>
       <div class="about reveal">
         <p>
-          Lập trình viên <strong>Fullstack cấp cao</strong> với gần một thập kỷ kinh nghiệm xây dựng
+          Lập trình viên <strong>Fullstack cấp cao</strong> với hơn 7 năm kinh nghiệm xây dựng
           các hệ thống doanh nghiệp quy mô lớn bằng <strong>Angular</strong>, <strong>Java Spring Boot</strong>
           và <strong>Oracle Database</strong>. Đảm nhiệm vai trò <strong>Dev Lead</strong> dẫn dắt nhóm kỹ thuật
           trong dự án Đấu thầu Điện tử Quốc gia, đồng thời có kinh nghiệm sâu về
@@ -219,9 +220,9 @@
           <div class="tl__body">
             <div class="tl__top">
               <h3>Fullstack Developer</h3>
-              <span class="tl__date" data-fill="fis-date">08/2016 – 2022</span>
+              <span class="tl__date" data-fill="fis-date">2019 – 2022</span>
             </div>
-            <p class="tl__org">FPT Information System (FIS)</p>
+            <p class="tl__org" data-fill="company1">Công ty đầu tiên — ⚠ CẦN XÁC NHẬN tên &amp; mốc</p>
             <ul class="tl__list">
               <li>Thiết kế, phát triển &amp; bảo trì ứng dụng web doanh nghiệp cho khách hàng <strong>chính phủ và thương mại</strong>.</li>
               <li>Front-End bằng <strong>Angular (8–14) + TypeScript</strong>; Back-End bằng <strong>Java Spring Boot + Oracle</strong>.</li>
@@ -313,20 +314,19 @@
           <h3 class="edu-col__h">🎓 Học vấn</h3>
           <div class="edu">
             <div class="edu__top">
-              <strong data-fill="school">Trường / Trung tâm</strong>
-              <span data-fill="school-year">2012 – 2015</span>
+              <strong>Trường Đại học Công nghiệp Hà Nội</strong>
             </div>
-            <p data-fill="major">Chuyên ngành Kỹ thuật phần mềm</p>
+            <p>Cử nhân Công nghệ thông tin</p>
           </div>
         </div>
 
         <div class="edu-col reveal">
-          <h3 class="edu-col__h">📜 Chứng chỉ</h3>
+          <h3 class="edu-col__h">💪 Thế mạnh nổi bật</h3>
           <ul class="cert">
-            <li>Java — Lập trình hướng đối tượng</li>
-            <li>Cloud Computing — Điện toán đám mây</li>
-            <li>Thuật toán &amp; Cấu trúc dữ liệu</li>
-            <li><span data-fill="cert-extra">Chứng chỉ khác (bổ sung)</span></li>
+            <li>Backend vững: Java / Spring Boot, tối ưu Oracle PL/SQL</li>
+            <li>Kinh nghiệm tích hợp thanh toán &amp; giao dịch</li>
+            <li>Dev Lead: dẫn dắt nhóm, review code, mentoring</li>
+            <li>Xây hệ thống lớn cho chính phủ, độ ổn định cao</li>
           </ul>
         </div>
 
@@ -349,29 +349,52 @@
       </div>
 
       <div class="contact reveal">
-        <a class="contact__card" href="mailto:your.email@gmail.com" data-fill="email-card">
+        <a class="contact__card" href="mailto:giangdv97@gmail.com">
           <span class="contact__ic">✉</span>
           <span class="contact__label">Email</span>
-          <span class="contact__val">your.email@gmail.com</span>
+          <span class="contact__val">giangdv97@gmail.com</span>
         </a>
-        <a class="contact__card" href="tel:+849xxxxxxxx" data-fill="phone-card">
+        <button type="button" class="contact__card" data-phone>
           <span class="contact__ic">☎</span>
           <span class="contact__label">Điện thoại</span>
-          <span class="contact__val">09xx xxx xxx</span>
-        </a>
-        <a class="contact__card" href="#" target="_blank" rel="noopener" data-fill="github-card">
+          <span class="contact__val phone-slot">Bấm để hiện 🔒</span>
+        </button>
+        <a class="contact__card" href="https://github.com/giangdv1997" target="_blank" rel="noopener">
           <span class="contact__ic">⎇</span>
           <span class="contact__label">GitHub</span>
-          <span class="contact__val">github.com/username</span>
+          <span class="contact__val">github.com/giangdv1997</span>
+        </a>
+        <a class="contact__card" href="https://giangdv97.pro/" target="_blank" rel="noopener">
+          <span class="contact__ic">★</span>
+          <span class="contact__label">Website</span>
+          <span class="contact__val">giangdv97.pro</span>
         </a>
       </div>
     </section>
   </main>
 
   <footer class="foot">
-    <p>© <span id="year"></span> <span data-fill="name-foot">Họ Và Tên</span> — Fullstack Developer.</p>
+    <p>© <span id="year"></span> Dương Văn Giang — Fullstack Developer.</p>
     <p class="foot__note">Thiết kế &amp; xây dựng bằng HTML · CSS · JS thuần.</p>
   </footer>
+
+  <!-- ░░░ MODAL: captcha toán học cho SĐT ░░░ -->
+  <div class="modal" id="phoneModal" hidden>
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="phoneModalTitle">
+      <button class="modal__x" data-close aria-label="Đóng">✕</button>
+      <h3 id="phoneModalTitle">Xác minh bạn là người thật 🤖</h3>
+      <p class="modal__desc">Giải phép tính để xem số điện thoại (chống bot thu thập tự động):</p>
+      <div class="modal__math"><span id="mathQ">? + ? = ?</span></div>
+      <input type="number" id="mathA" class="modal__input" placeholder="Nhập kết quả" autocomplete="off" inputmode="numeric" />
+      <p class="modal__err" id="mathErr" hidden>Sai rồi, thử lại nhé!</p>
+      <button class="btn btn--primary" id="mathSubmit">Xác nhận</button>
+      <div class="modal__result" id="phoneResult" hidden>
+        <span class="modal__phone" id="phoneOut"></span>
+        <button class="btn btn--ghost" id="copyPhone">⧉ Sao chép số</button>
+      </div>
+    </div>
+  </div>
 
   <button class="totop" id="toTop" aria-label="Lên đầu trang">↑</button>
 

@@ -108,4 +108,56 @@
     };
     loop();
   }
+
+  /* ---------- SĐT: captcha toán học chống bot ---------- */
+  /* Số không để trần trong source: lưu base64, chỉ giải mã sau khi giải toán đúng */
+  const PHONE_ENC = 'MDk4MTkyMTE2OA==';
+  const modal = $('#phoneModal');
+  if (modal) {
+    const qEl = $('#mathQ'), aEl = $('#mathA'), errEl = $('#mathErr');
+    const resEl = $('#phoneResult'), outEl = $('#phoneOut');
+    let expected = 0;
+    const rnd = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
+
+    const challenge = () => {
+      const ops = ['+', '−', '×', '÷'];
+      const op = ops[rnd(0, 3)];
+      let a, b;
+      if (op === '+')       { a = rnd(11, 49); b = rnd(6, 30); expected = a + b; }
+      else if (op === '−')  { a = rnd(30, 69); b = rnd(5, 25); expected = a - b; }
+      else if (op === '×')  { a = rnd(3, 9);   b = rnd(3, 9);  expected = a * b; }
+      else                  { b = rnd(2, 9); expected = rnd(2, 9); a = b * expected; } // a ÷ b
+      qEl.textContent = `${a} ${op} ${b} = ?`;
+    };
+
+    const open = () => {
+      modal.hidden = false;
+      resEl.hidden = true; errEl.hidden = true; aEl.value = '';
+      challenge();
+      setTimeout(() => aEl.focus(), 50);
+    };
+    const close = () => { modal.hidden = true; };
+
+    const check = () => {
+      if (parseInt(aEl.value, 10) === expected) {
+        const phone = atob(PHONE_ENC);
+        outEl.textContent = phone;
+        $$('.phone-slot').forEach(el => { el.textContent = phone; }); // hiện inline + in vào PDF
+        resEl.hidden = false; errEl.hidden = true;
+      } else {
+        errEl.hidden = false; challenge(); aEl.value = ''; aEl.focus();
+      }
+    };
+
+    $$('[data-phone]').forEach(b => b.addEventListener('click', open));
+    $('#mathSubmit')?.addEventListener('click', check);
+    aEl.addEventListener('keydown', e => { if (e.key === 'Enter') check(); });
+    $$('[data-close]', modal).forEach(b => b.addEventListener('click', close));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) close(); });
+    $('#copyPhone')?.addEventListener('click', () => {
+      const btn = $('#copyPhone'), label = btn.textContent;
+      navigator.clipboard?.writeText(atob(PHONE_ENC));
+      btn.textContent = '✓ Đã sao chép'; setTimeout(() => { btn.textContent = label; }, 1500);
+    });
+  }
 })();
